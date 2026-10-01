@@ -189,17 +189,18 @@ pnpm build       # compila a dist/
 
 ### Publicar una versión
 
-La publicación en npm es automática al subir un tag que coincida con la versión de `package.json`:
+La publicación es automática con [semantic-release](https://semantic-release.gitbook.io/). En cada push a `main` se analizan los commits desde la última versión y, si corresponde, se publica en npm, se crea el tag y el GitHub Release con las notas de cambios.
 
-```bash
-npm version patch
-```
+Los mensajes de commit siguen [Conventional Commits](https://www.conventionalcommits.org/es/):
 
-```bash
-git push --follow-tags
-```
+| Commit | Versión |
+| --- | --- |
+| `fix: ...` | patch (1.0.0 → 1.0.1) |
+| `feat: ...` | minor (1.0.0 → 1.1.0) |
+| `feat!: ...` o `BREAKING CHANGE:` en el cuerpo | major (1.0.0 → 2.0.0) |
+| `docs:`, `chore:`, `test:`, `ci:`, `refactor:` | no publica |
 
-El workflow requiere el secreto `NPM_TOKEN` en el repositorio.
+El campo `version` de `package.json` no se edita a mano. El workflow requiere el secreto `NPM_TOKEN` en el repositorio.
 
 ## Licencia
 

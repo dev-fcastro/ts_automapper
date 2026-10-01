@@ -1,6 +1,6 @@
 {
   "name": "ts_automapper",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Librería TypeScript inspirada en AutoMapper de C# para mapear objetos de forma sencilla y tipada.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -45,15 +45,25 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/odimsom/ts_automapper.git"
+    "url": "git+https://github.com/dev-fcastro/ts_automapper.git"
   },
   "bugs": {
-    "url": "https://github.com/odimsom/ts_automapper/issues"
+    "url": "https://github.com/dev-fcastro/ts_automapper/issues"
   },
-  "homepage": "https://github.com/odimsom/ts_automapper#readme",
+  "homepage": "https://github.com/dev-fcastro/ts_automapper#readme",
   "packageManager": "pnpm@10.33.0",
   "devDependencies": {
+    "semantic-release": "^25.0.9",
     "typescript": "^6.0.3",
     "vitest": "^5.0.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
