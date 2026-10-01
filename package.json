@@ -1,5 +1,5 @@
 {
-  "name": "ts_automapper",
+  "name": "@fcastro_dev/ts_automapper",
   "version": "0.0.0-semantically-released",
   "description": "Librería TypeScript inspirada en AutoMapper de C# para mapear objetos de forma sencilla y tipada.",
   "main": "dist/index.js",

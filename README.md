@@ -11,11 +11,11 @@ Librería en TypeScript inspirada en [AutoMapper](https://automapper.org/) de C#
 ## Instalación
 
 ```bash
-npm install ts_automapper
+npm install @fcastro_dev/ts_automapper
 ```
 
 ```bash
-pnpm add ts_automapper
+pnpm add @fcastro_dev/ts_automapper
 ```
 
 Requiere Node.js 18 o superior.
@@ -23,7 +23,7 @@ Requiere Node.js 18 o superior.
 ## Uso rápido
 
 ```ts
-import { createMapper } from "ts_automapper";
+import { createMapper } from "@fcastro_dev/ts_automapper";
 
 class UserEntity {
   id = 0;
@@ -71,8 +71,8 @@ const dto = mapper.map<User, UserDto>("User", "UserDto", user);
 Si tu aplicación solo necesita un mapper, puedes usar la instancia por defecto:
 
 ```ts
-import mapper from "ts_automapper";
-// o: import { mapper } from "ts_automapper";
+import mapper from "@fcastro_dev/ts_automapper";
+// o: import { mapper } from "@fcastro_dev/ts_automapper";
 ```
 
 ## Mapeo por convención (`autoMap`)
@@ -155,7 +155,7 @@ La configuración de miembros del mapping original no se invierte automáticamen
 Agrupa registraciones relacionadas, como los `Profile` de AutoMapper:
 
 ```ts
-import type { AutoMapper } from "ts_automapper";
+import type { AutoMapper } from "@fcastro_dev/ts_automapper";
 
 export function userProfile(mapper: AutoMapper) {
   mapper.createMap(UserEntity, UserDto);
